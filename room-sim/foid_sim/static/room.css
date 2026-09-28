@@ -1,0 +1,163 @@
+:root {
+  font-size: 16px;
+  color-scheme: light;
+  --ink: #2c2a28;
+  --paper: #f7f2ea;
+  --paper-2: #efe6d6;
+  --line: #d4c4a8;
+  --accent: #2c3a4a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper-2);
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0.9rem 1.1rem 1.4rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 0.6rem;
+  padding: 0.55rem 0.9rem;
+}
+
+.brand p {
+  margin: 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.topbar-end {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.lang-switch button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  padding: 0.28rem 0.62rem;
+  cursor: pointer;
+}
+
+.lang-switch button.is-active {
+  background: var(--accent);
+  color: #f4f0ea;
+}
+
+.live-badge {
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  padding: 0.22rem 0.58rem;
+  border-radius: 999px;
+  background: #d7efe4;
+  color: #1e4a38;
+}
+
+.live-badge.is-off {
+  background: var(--line);
+  color: #6a6258;
+}
+
+.stage {
+  background: #cbb394;
+  border-radius: 1.1rem;
+  overflow: hidden;
+  border: 7px solid #8b5e34;
+}
+
+.stage svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hotspot {
+  cursor: pointer;
+}
+
+#window .sash {
+  transform-box: fill-box;
+  transform-origin: 0% 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease;
+}
+
+#window.is-open .sash {
+  transform: translateX(82%);
+}
+
+#window .sash .pane,
+#window .sash .shine {
+  pointer-events: none;
+}
+
+#tv .screen {
+  transition: fill 0.3s ease;
+}
+
+#tv.is-on .screen {
+  fill: url(#tvOn);
+}
+
+#lamp .glow {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#lamp.is-on .glow {
+  opacity: 0.55;
+}
+
+#lamp.is-on .shade {
+  fill: #f0a45a;
+}
+
+#bed .headrest {
+  transform-box: view-box;
+  transform-origin: 668px 548px;
+  transform: rotate(0deg);
+  transition: transform 0.5s ease;
+}

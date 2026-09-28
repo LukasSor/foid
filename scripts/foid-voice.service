@@ -1,0 +1,19 @@
+[Unit]
+Description=Foid voice box
+After=network-online.target sound.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=foid
+Group=audio
+WorkingDirectory=/opt/foid
+Environment=FOID_MODELS=/opt/foid/models
+Environment=FOID_CONFIG=/opt/foid/data/settings.json
+ExecStart=/opt/foid/.venv/bin/foid-voice --host 0.0.0.0 --port 8080
+Restart=on-failure
+RestartSec=3
+Nice=-5
+
+[Install]
+WantedBy=multi-user.target

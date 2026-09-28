@@ -1,0 +1,33 @@
+id: tv
+name: tv
+ui: tv
+aliases:
+  - tv
+  - fernseher
+  - fernseh
+  - television
+  - televize
+defaults:
+  "on": false
+actions:
+  - id: "on"
+    aliases:
+      - an
+      - ein
+      - einschalten
+      - aufdrehen
+      - anmachen
+      - "on"
+      - zapni
+    set:
+      "on": true
+  - id: "off"
+    aliases:
+      - aus
+      - ausschalten
+      - abdrehen
+      - ausmachen
+      - "off"
+      - vypni
+    set:
+      "on": false

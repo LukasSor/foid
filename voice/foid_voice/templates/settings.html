@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" data-theme="lofi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ t(locale, "settings.title") }}</title>
+    <link rel="stylesheet" href="/static/css/daisyui.min.css" />
+    <link rel="stylesheet" href="/static/css/app.css" />
+  </head>
+  <body>
+    <main class="foid-wrap">
+      <header class="foid-bar">
+        <div class="brand">
+          <p>Foid</p>
+          <h1 data-i18n="settings.heading">{{ t(locale, "settings.heading") }}</h1>
+        </div>
+        <div class="foid-bar-end">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-locale="en" {% if locale == "en" %}class="is-active"{% endif %}>EN</button>
+            <button type="button" data-locale="de" {% if locale == "de" %}class="is-active"{% endif %}>DE</button>
+          </div>
+          <span class="phase-pill" data-phase data-i18n-phase="{{ status.phase }}">
+            {{ t(locale, "phase." + status.phase) if status.phase in ["idle", "listening", "understanding", "sending"] else status.phase }}
+          </span>
+        </div>
+      </header>
+
+      {% if saved %}
+      <div role="alert" class="note-ok" data-i18n="settings.saved">{{ t(locale, "settings.saved") }}</div>
+      {% endif %}
+      {% if wake_error %}
+      <div role="alert" class="note-err" id="wake-error" data-error-key="{{ wake_error.key }}" data-model="{{ wake_error.name }}" data-reason="{{ wake_error.reason }}">{{ t(locale, wake_error.key, name=wake_error.name, reason=wake_error.reason) }}</div>
+      {% endif %}
+
+      <div class="foid-grid">
+      <form method="post" action="/settings" class="panel" id="settings-form">
+        <input type="hidden" name="locale" id="locale-field" value="{{ locale }}" />
+
+        <h2 data-i18n="settings.listen_section">{{ t(locale, "settings.listen_section") }}</h2>
+
+          <label class="field">
+            <span data-i18n="settings.wake_word">{{ t(locale, "settings.wake_word") }}</span>
+            <select name="wake_word" id="wake-word" class="select select-bordered select-sm">
+              {% for group in wake_groups %}
+              {% if group.key == "official" %}
+              {% set group_label = t(locale, "settings.wake_group_official") %}
+              {% elif group.key == "local" %}
+              {% set group_label = t(locale, "settings.wake_group_local") %}
+              {% elif group.lang %}
+              {% set lang_label = t(locale, "lang." + group.lang) %}
+              {% set group_label = t(locale, "settings.wake_group_ha_lang", lang=lang_label if lang_label != "lang." + group.lang else group.lang) %}
+              {% else %}
+              {% set group_label = t(locale, "settings.wake_group_ha") %}
+              {% endif %}
+              <optgroup data-group="{{ group.key }}" data-lang="{{ group.lang or '' }}" label="{{ group_label }}">
+                {% for item in group.entries %}
+                {% set translated = t(locale, item.label_key) %}
+                {% set name = translated if translated != item.label_key else item.label %}
+                <option value="{{ item.id }}" data-label-key="{{ item.label_key }}" data-fallback="{{ item.label }}" data-downloaded="{{ '1' if item.downloaded else '0' }}" {% if settings.wake_word == item.id %}selected{% endif %}>{{ name }} — {{ t(locale, "settings.wake_downloaded") if item.downloaded else t(locale, "settings.wake_will_download") }}</option>
+                {% endfor %}
+              </optgroup>
+              {% endfor %}
+            </select>
+            <small id="wake-status-hint"></small>
+            <small data-i18n="settings.wake_hint">{{ t(locale, "settings.wake_hint") }}</small>
+          </label>
+
+          <label class="field">
+            <span data-i18n="settings.language">{{ t(locale, "settings.language") }}</span>
+            <select name="stt_language" id="stt-language" class="select select-bordered select-sm">
+              {% for code in stt_languages %}
+              <option value="{{ code }}" {% if stt_picker_language == code %}selected{% endif %}>{{ t(locale, "lang." + code) }}</option>
+              {% endfor %}
+            </select>
+          </label>
+          {% set stt_model_ids = stt_models | map(attribute='id') | list %}
+          {% set stt_current_model = settings.stt_model if stt_picker_language == settings.stt_language else stt_recommended %}
+          {% set stt_selected = stt_current_model if stt_current_model in stt_model_ids else (stt_recommended if stt_models else stt_current_model) %}
+          <div class="field" id="stt-model-field" {% if not stt_models %}hidden{% endif %}>
+            <span id="stt-model-label" data-i18n="settings.stt_model">{{ t(locale, "settings.stt_model") }}</span>
+            <div class="stt-model-list" id="stt-model-list" role="radiogroup" aria-labelledby="stt-model-label">
+              {% for model in stt_models %}
+              <label class="stt-model-option{% if model.id == stt_selected %} is-selected{% endif %}">
+                <input type="radio" class="radio radio-sm" name="stt-model-choice" value="{{ model.id }}" data-label-key="{{ model.label_key }}" {% if model.id == stt_selected %}checked{% endif %} />
+                <span class="stt-model-copy">
+                  <strong>{% if model.id == stt_recommended %}{{ t(locale, model.label_key) }} — {{ t(locale, "stt.recommended") }}{% else %}{{ t(locale, model.label_key) }}{% endif %}</strong>
+                  <small class="stt-model-id" title="{{ model.id }}">{{ model.id }}</small>
+                </span>
+              </label>
+              {% endfor %}
+            </div>
+          </div>
+          <input type="hidden" name="stt_model" id="stt-model" value="{{ stt_selected }}" data-selected="{{ stt_selected }}" />
+
+          <label class="field">
+            <span data-i18n="settings.silence">{{ t(locale, "settings.silence") }}</span>
+            <input type="range" name="silence_ms" min="300" max="800" step="50" value="{{ settings.silence_ms }}" class="range range-primary range-xs" id="silence" />
+            <small><span data-i18n="settings.silence_hint" data-i18n-ms>{{ t(locale, "settings.silence_hint", ms=settings.silence_ms) }}</span></small>
+          </label>
+
+          <label class="field">
+            <span data-i18n="settings.accuracy">{{ t(locale, "settings.accuracy") }}</span>
+            <select name="beam_size" class="select select-bordered select-sm">
+              <option value="1" data-i18n="settings.accuracy_fast" {% if settings.beam_size == 1 %}selected{% endif %}>{{ t(locale, "settings.accuracy_fast") }}</option>
+              <option value="5" data-i18n="settings.accuracy_precise" {% if settings.beam_size == 5 %}selected{% endif %}>{{ t(locale, "settings.accuracy_precise") }}</option>
+            </select>
+          </label>
+
+          <div class="host-row">
+            <label class="field grow">
+              <span data-i18n="settings.room_host">{{ t(locale, "settings.room_host") }}</span>
+              <input class="input input-bordered input-sm" name="room_host" value="{{ settings.room_host }}" autocomplete="off" />
+            </label>
+            <label class="field port">
+              <span data-i18n="settings.room_port">{{ t(locale, "settings.room_port") }}</span>
+              <input class="input input-bordered input-sm" name="room_port" type="number" min="1" max="65535" value="{{ settings.room_port }}" />
+            </label>
+          </div>
+
+          <label class="field">
+            <span data-i18n="settings.earcon">{{ t(locale, "settings.earcon") }}</span>
+            <input type="range" name="earcon_volume" min="0" max="100" step="5" value="{{ (settings.earcon_volume * 100) | int }}" class="range range-primary range-xs" id="volume" />
+            <small><span id="volume-out">{{ (settings.earcon_volume * 100) | int }}</span> %</small>
+            <small data-i18n="settings.earcon_hint">{{ t(locale, "settings.earcon_hint") }}</small>
+          </label>
+
+          <button class="btn btn-primary btn-sm" type="submit" data-i18n="settings.save">{{ t(locale, "settings.save") }}</button>
+      </form>
+
+        <section class="panel">
+          <h2 data-i18n="settings.check_section">{{ t(locale, "settings.check_section") }}</h2>
+          <p class="now-line">
+            <span data-i18n="settings.now">{{ t(locale, "settings.now") }}</span>:
+            <strong data-phase-label data-i18n-phase="{{ status.phase }}">{{ t(locale, "phase." + status.phase) if status.phase in ["idle", "listening", "understanding", "sending"] else status.phase }}</strong>
+          </p>
+          <p class="hint" id="room-warn" {% if status.room != "offline" %}hidden{% endif %} data-i18n="settings.room_disconnected">{{ t(locale, "settings.room_disconnected") }}</p>
+          <div class="transcript-box" id="transcript">{{ status.transcript or t(locale, "settings.transcript_empty") }}</div>
+          <div class="actions">
+            <button class="btn btn-sm" type="button" id="wake-btn" data-i18n="settings.listen_now">{{ t(locale, "settings.listen_now") }}</button>
+            <button class="btn btn-sm" type="button" id="mic-btn" data-i18n="settings.mic_test">{{ t(locale, "settings.mic_test") }}</button>
+          </div>
+          <p class="hint" id="mic-result"></p>
+          <div class="text-row">
+            <label class="field grow">
+              <span data-i18n="settings.text_command">{{ t(locale, "settings.text_command") }}</span>
+              <input class="input input-bordered input-sm" id="text-cmd" data-i18n-placeholder="settings.text_placeholder" placeholder="{{ t(locale, "settings.text_placeholder") }}" autocomplete="off" />
+            </label>
+            <button class="btn btn-primary btn-sm" type="button" id="text-send" data-i18n="settings.send">{{ t(locale, "settings.send") }}</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script id="stt-catalog" type="application/json">{{ stt_catalog | tojson }}</script>
+    <script src="/i18n.js"></script>
+    <script>
+      const silence = document.getElementById("silence");
+      const volume = document.getElementById("volume");
+      const volumeOut = document.getElementById("volume-out");
+      const localeField = document.getElementById("locale-field");
+      const I18N = window.FOID_I18N || { en: {}, de: {}, default: "en" };
+      let locale = localeField.value || I18N.default || "en";
+      const emptyTranscript = {{ (status.transcript or "") | tojson }};
+      const STT = JSON.parse(document.getElementById("stt-catalog").textContent);
+      const sttLanguage = document.getElementById("stt-language");
+      const sttModel = document.getElementById("stt-model");
+      const sttModelField = document.getElementById("stt-model-field");
+      const sttModelList = document.getElementById("stt-model-list");
+
+      function t(key, vars) {
+        const bundle = I18N[locale] || I18N.en || {};
+        let text = bundle[key] || (I18N.en && I18N.en[key]) || key;
+        if (vars) {
+          Object.entries(vars).forEach(([name, value]) => {
+            text = text.replaceAll("{" + name + "}", String(value));
+          });
+        }
+        return text;
+      }
+
+      function setRoomWarn(offline) {
+        const warn = document.getElementById("room-warn");
+        if (warn) warn.hidden = !offline;
+      }
+
+      function wakeName(option) {
+        const key = option.dataset.labelKey;
+        const fallback = option.dataset.fallback || option.value.replaceAll("_", " ");
+        if (key) {
+          const translated = t(key);
+          if (translated && translated !== key) return translated;
+        }
+        return fallback;
+      }
+
+      function wakeGroupLabel(group) {
+        const kind = group.dataset.group;
+        if (kind === "official") return t("settings.wake_group_official");
+        if (kind === "local") return t("settings.wake_group_local");
+        const lang = group.dataset.lang;
+        if (kind === "community" && lang) {
+          const langKey = "lang." + lang;
+          const langName = t(langKey);
+          return t("settings.wake_group_ha_lang", { lang: langName !== langKey ? langName : lang });
+        }
+        return t("settings.wake_group_ha");
+      }
+
+      function langName(code) {
+        const key = "lang." + code;
+        const name = t(key);
+        return name && name !== key ? name : code;
+      }
+
+      function orderedLangs() {
+        const pinned = (STT.pinned && STT.pinned.length) ? STT.pinned : ["auto", "de", "en"];
+        const all = (STT.languages && STT.languages.length) ? STT.languages : pinned;
+        const head = pinned.filter((code) => all.includes(code));
+        const rest = all
+          .filter((code) => !pinned.includes(code))
+          .sort((a, b) => langName(a).localeCompare(langName(b), locale || "en"));
+        return head.concat(rest);
+      }
+
+      function modelsFor(lang) {
+        const shared = STT.shared_languages || [];
+        return (STT.models || []).filter((model) => {
+          if (!model.specific) return false;
+          if (model.shared_pack) return shared.includes(lang);
+          if (model.english_only && lang !== "en") return false;
+          if (model.for_languages && model.for_languages.length && !model.for_languages.includes(lang)) {
+            return false;
+          }
+          return true;
+        });
+      }
+
+      function recommendedId(lang) {
+        return (STT.recommended && STT.recommended[lang]) || STT.default_recommended;
+      }
+
+      function renderSttLanguages() {
+        if (!sttLanguage) return;
+        const langs = orderedLangs();
+        let current = sttLanguage.value;
+        if (!langs.includes(current)) current = langs[0] || "";
+        sttLanguage.replaceChildren();
+        langs.forEach((code) => {
+          const option = document.createElement("option");
+          option.value = code;
+          option.textContent = langName(code);
+          if (code === current) option.selected = true;
+          sttLanguage.appendChild(option);
+        });
+      }
+
+      function selectedSttModel() {
+        if (sttModel && sttModel.value) return sttModel.value;
+        return (sttModel && sttModel.dataset.selected) || "";
+      }
+
+      function setSttModel(modelId) {
+        if (!sttModel) return;
+        sttModel.value = modelId;
+        sttModel.dataset.selected = modelId;
+        if (!sttModelList) return;
+        sttModelList.querySelectorAll(".stt-model-option").forEach((option) => {
+          const radio = option.querySelector("input[type='radio']");
+          const on = Boolean(radio && radio.value === modelId);
+          option.classList.toggle("is-selected", on);
+          if (radio) radio.checked = on;
+        });
+      }
+
+      function renderSttModels() {
+        if (!sttLanguage || !sttModel || !sttModelField || !sttModelList) return;
+        const lang = sttLanguage.value;
+        const models = modelsFor(lang);
+        let selected = selectedSttModel();
+        if (!models.some((model) => model.id === selected)) {
+          selected = recommendedId(lang);
+        }
+        if (!models.length) {
+          setSttModel(selected);
+          sttModelField.hidden = true;
+          sttModelList.replaceChildren();
+          return;
+        }
+        sttModelField.hidden = false;
+        const rec = recommendedId(lang);
+        sttModelList.replaceChildren();
+        models.forEach((model) => {
+          const option = document.createElement("label");
+          option.className = "stt-model-option" + (model.id === selected ? " is-selected" : "");
+          const radio = document.createElement("input");
+          radio.type = "radio";
+          radio.className = "radio radio-sm";
+          radio.name = "stt-model-choice";
+          radio.value = model.id;
+          radio.checked = model.id === selected;
+          radio.addEventListener("change", () => {
+            if (radio.checked) setSttModel(model.id);
+          });
+          const copy = document.createElement("span");
+          copy.className = "stt-model-copy";
+          const title = document.createElement("strong");
+          title.textContent = t(model.label_key) + (model.id === rec ? " — " + t("stt.recommended") : "");
+          const caption = document.createElement("small");
+          caption.className = "stt-model-id";
+          caption.textContent = model.id;
+          caption.title = model.id;
+          copy.append(title, caption);
+          option.append(radio, copy);
+          sttModelList.appendChild(option);
+        });
+        setSttModel(selected);
+      }
+
+      function refreshWakeLabels() {
+        document.querySelectorAll("#wake-word optgroup").forEach((group) => {
+          group.label = wakeGroupLabel(group);
+        });
+        document.querySelectorAll("#wake-word option").forEach((option) => {
+          const hint = option.dataset.downloaded === "1"
+            ? t("settings.wake_downloaded")
+            : t("settings.wake_will_download");
+          option.textContent = wakeName(option) + " — " + hint;
+        });
+        const select = document.getElementById("wake-word");
+        const hint = document.getElementById("wake-status-hint");
+        if (select && hint) {
+          const option = select.selectedOptions[0];
+          if (!option) {
+            hint.textContent = "";
+            return;
+          }
+          hint.textContent = option.dataset.downloaded === "1"
+            ? t("settings.wake_downloaded")
+            : t("settings.wake_will_download");
+        }
+        const errorBox = document.getElementById("wake-error");
+        if (errorBox && errorBox.dataset.errorKey) {
+          errorBox.textContent = t(errorBox.dataset.errorKey, {
+            name: errorBox.dataset.model || "",
+            reason: errorBox.dataset.reason || "",
+          });
+        }
+      }
+
+      function applyI18n() {
+        document.documentElement.lang = locale;
+        document.title = t("settings.title");
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          if (el.dataset.i18nMs !== undefined) {
+            el.textContent = t(el.dataset.i18n, { ms: silence.value });
+            return;
+          }
+          el.textContent = t(el.dataset.i18n);
+        });
+        document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+          el.setAttribute("placeholder", t(el.dataset.i18nPlaceholder));
+        });
+        document.querySelectorAll("[data-i18n-phase]").forEach((el) => {
+          const phase = el.dataset.i18nPhase || "idle";
+          el.textContent = t("phase." + phase) || phase;
+        });
+        document.querySelectorAll(".lang-switch [data-locale]").forEach((button) => {
+          button.classList.toggle("is-active", button.dataset.locale === locale);
+        });
+        const transcript = document.getElementById("transcript");
+        if (transcript && !transcript.dataset.filled) {
+          transcript.textContent = t("settings.transcript_empty");
+        }
+        refreshWakeLabels();
+        renderSttLanguages();
+        renderSttModels();
+      }
+
+      function setLocale(next) {
+        locale = next;
+        localeField.value = next;
+        applyI18n();
+      }
+
+      const wakeSelect = document.getElementById("wake-word");
+      if (wakeSelect) wakeSelect.addEventListener("change", refreshWakeLabels);
+      if (sttLanguage) sttLanguage.addEventListener("change", renderSttModels);
+
+      silence.addEventListener("input", () => {
+        const hint = document.querySelector("[data-i18n-ms]");
+        if (hint) hint.textContent = t("settings.silence_hint", { ms: silence.value });
+      });
+      volume.addEventListener("input", () => (volumeOut.textContent = volume.value));
+      document.querySelectorAll(".lang-switch [data-locale]").forEach((button) => {
+        button.addEventListener("click", () => setLocale(button.dataset.locale));
+      });
+
+      async function refresh() {
+        const res = await fetch("/api/status");
+        const data = await res.json();
+        document.querySelectorAll("[data-phase], [data-phase-label]").forEach((el) => {
+          el.dataset.i18nPhase = data.phase;
+          el.textContent = t("phase." + data.phase) || data.phase;
+        });
+        setRoomWarn(String(data.room || "").toLowerCase() === "offline");
+        if (data.transcript) {
+          const box = document.getElementById("transcript");
+          box.textContent = data.transcript;
+          box.dataset.filled = "1";
+        }
+      }
+      setInterval(refresh, 1000);
+      document.getElementById("wake-btn").onclick = () => fetch("/api/wake", { method: "POST" });
+      document.getElementById("mic-btn").onclick = async () => {
+        const out = document.getElementById("mic-result");
+        out.textContent = t("settings.mic_recording");
+        const res = await fetch("/api/mic-test", { method: "POST" });
+        const data = await res.json();
+        if (data.ok) out.textContent = data.transcript || t("settings.mic_empty");
+        else out.textContent = data.error_key ? t(data.error_key) : data.error;
+      };
+      document.getElementById("text-cmd").addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          document.getElementById("text-send").click();
+        }
+      });
+      document.getElementById("text-send").onclick = async () => {
+        const text = document.getElementById("text-cmd").value;
+        const res = await fetch("/api/command", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ text }),
+        });
+        const data = await res.json();
+        const box = document.getElementById("transcript");
+        box.textContent = data.transcript || (data.error_key ? t(data.error_key) : data.error) || "";
+        if (box.textContent) box.dataset.filled = "1";
+      };
+      if (emptyTranscript) document.getElementById("transcript").dataset.filled = "1";
+      applyI18n();
+      refresh();
+    </script>
+  </body>
+</html>

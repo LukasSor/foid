@@ -1,0 +1,40 @@
+id: bed
+name: bed
+ui: bed
+aliases:
+  - bett
+  - bettlehne
+  - lehne
+  - kopfteil
+  - rückenlehne
+  - rueckenlehne
+defaults:
+  headrest: 0.2
+actions:
+  - id: up
+    aliases:
+      - oben
+      - obn
+      - hoch
+      - rauf
+      - nach oben
+      - nach obn
+      - hochfahren
+      - aufstellen
+    delta:
+      headrest: 0.25
+    clamp:
+      headrest: [0, 1]
+  - id: down
+    aliases:
+      - unten
+      - untn
+      - runter
+      - runterfahren
+      - nach unten
+      - nach untn
+      - flach
+    delta:
+      headrest: -0.25
+    clamp:
+      headrest: [0, 1]

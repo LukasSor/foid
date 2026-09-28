@@ -1,0 +1,79 @@
+# Virtual environments
+.venv/
+venv/
+.env/
+.ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.python-version
+
+# Local runtime data (settings dumps, logs, PIDs)
+data/*
+!data/.gitkeep
+
+# Model weights and caches (download separately)
+models/
+*.gguf
+*.bin
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.safetensors
+*.ckpt
+whisper/
+ctranslate2/
+
+# Secrets and local env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.*
+
+# Generated / scratch audio (keep packaged earcons under voice/.../static/sounds/)
+*.wav
+!voice/foid_voice/static/sounds/*.wav
+
+# Settings dumps outside data/
+settings.json
+**/settings.json
+
+# IDE / editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Agent / Cursor local state
+.cursor/
+.agent-stores/
+agent-transcripts/
+*.cursor*
+
+# Logs and temp
+*.log
+*.pid
+tmp/
+temp/
+.cache/

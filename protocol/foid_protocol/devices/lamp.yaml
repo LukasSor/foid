@@ -1,0 +1,31 @@
+id: lamp
+name: lamp
+ui: lamp
+aliases:
+  - lampe
+  - licht
+  - lichtl
+  - nachttischlampe
+  - lampa
+defaults:
+  "on": false
+actions:
+  - id: "on"
+    aliases:
+      - an
+      - ein
+      - einschalten
+      - anmachen
+      - hell
+      - "on"
+    set:
+      "on": true
+  - id: "off"
+    aliases:
+      - aus
+      - ausschalten
+      - ausmachen
+      - dunkel
+      - "off"
+    set:
+      "on": false

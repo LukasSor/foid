@@ -1,0 +1,15 @@
+[Unit]
+Description=Foid room simulator
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=foid
+WorkingDirectory=/opt/foid
+ExecStart=/opt/foid/.venv/bin/foid-sim --host 0.0.0.0 --port 8090 --tcp-host 0.0.0.0 --tcp-port 9500
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,289 @@
+:root,
+html[data-theme="lofi"] {
+  color-scheme: light;
+  font-size: 16px;
+  --p: 213 28% 32%;
+  --pf: 213 28% 24%;
+  --pc: 210 20% 96%;
+  --s: 175 18% 38%;
+  --sf: 175 18% 30%;
+  --sc: 180 20% 96%;
+  --a: 28 42% 46%;
+  --af: 28 42% 38%;
+  --ac: 36 40% 96%;
+  --n: 220 16% 20%;
+  --nf: 220 16% 14%;
+  --nc: 210 20% 96%;
+  --b1: 40 28% 97%;
+  --b2: 36 22% 93%;
+  --b3: 32 14% 86%;
+  --bc: 220 16% 18%;
+  --rounded-box: 0.55rem;
+  --rounded-btn: 0.4rem;
+  --rounded-badge: 0.4rem;
+}
+
+body {
+  min-height: 100vh;
+  background: hsl(var(--b2));
+  color: hsl(var(--bc));
+}
+
+.foid-wrap {
+  max-width: 58rem;
+  margin: 0 auto;
+  padding: 0.9rem 1rem 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.foid-bar,
+.panel,
+.note-ok,
+.note-err {
+  background: hsl(var(--b1));
+  border: 1px solid hsl(var(--b3));
+  border-radius: var(--rounded-box);
+}
+
+.foid-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 0.5rem 0.8rem;
+}
+
+.brand p {
+  margin: 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 1.28rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.foid-bar-end {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid hsl(var(--b3));
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.lang-switch button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  padding: 0.26rem 0.6rem;
+  cursor: pointer;
+}
+
+.lang-switch button.is-active {
+  background: hsl(var(--n));
+  color: hsl(var(--nc));
+}
+
+.phase-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  background: hsl(var(--p) / 0.12);
+  color: hsl(var(--p));
+}
+
+.note-ok,
+.note-err {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+.note-ok {
+  color: hsl(158 40% 24%);
+  background: hsl(158 35% 92%);
+  border-color: hsl(158 30% 80%);
+}
+
+.note-err {
+  color: hsl(0 42% 32%);
+  background: hsl(0 55% 95%);
+  border-color: hsl(0 40% 84%);
+}
+
+.foid-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 900px) {
+  .foid-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: start;
+  }
+}
+
+.foid-grid > .panel,
+.foid-grid > form.panel {
+  min-width: 0;
+}
+
+form.panel {
+  margin: 0;
+}
+
+.panel {
+  padding: 0.85rem 0.95rem 1rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.panel h2 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.field {
+  display: grid;
+  gap: 0.28rem;
+  min-width: 0;
+}
+
+.field[hidden] {
+  display: none;
+}
+
+.field > span {
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+
+.field .select,
+.field .input {
+  width: 100%;
+  min-width: 0;
+}
+
+.field small,
+.hint,
+.now-line,
+#wake-status-hint {
+  font-size: 0.78rem;
+  opacity: 0.72;
+  line-height: 1.35;
+}
+
+.stt-model-list {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.stt-model-option {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.45rem 0.55rem;
+  align-items: start;
+  margin: 0;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid hsl(var(--b3));
+  border-radius: var(--rounded-btn);
+  background: hsl(var(--b1));
+  cursor: pointer;
+  min-width: 0;
+}
+
+.stt-model-option.is-selected {
+  border-color: hsl(var(--p) / 0.4);
+  background: hsl(var(--p) / 0.06);
+}
+
+.stt-model-option .radio {
+  margin-top: 0.18rem;
+}
+
+.stt-model-copy {
+  display: grid;
+  gap: 0.08rem;
+  min-width: 0;
+}
+
+.stt-model-copy strong {
+  font-size: 0.85rem;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.field .stt-model-id {
+  font-size: 0.72rem;
+  font-weight: 400;
+  opacity: 0.72;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.host-row,
+.text-row,
+.actions {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  align-items: end;
+}
+
+.host-row .port {
+  width: 6.5rem;
+}
+
+.grow {
+  flex: 1 1 12rem;
+}
+
+.btn {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+
+.select,
+.input {
+  min-height: 2.15rem;
+  height: 2.15rem;
+}
+
+.transcript-box {
+  min-height: 3.1rem;
+  padding: 0.55rem 0.65rem;
+  border-radius: 0.45rem;
+  background: hsl(var(--b2));
+  font-size: 0.9rem;
+}
+
+.now-line {
+  margin: 0;
+}
+
+.now-line strong {
+  opacity: 1;
+  font-weight: 650;
+  color: hsl(var(--bc));
+}

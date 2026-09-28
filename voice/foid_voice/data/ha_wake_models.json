@@ -1,0 +1,978 @@
+[
+  {
+    "id": "ae-ttuddae",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/ae-ttuddae/ae-ttuddae.onnx",
+    "filename": "ae-ttuddae.onnx",
+    "label": "Ae-ttuddae",
+    "repo_path": "en/ae-ttuddae/ae-ttuddae.onnx"
+  },
+  {
+    "id": "alfred",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/alfred/alfred.onnx",
+    "filename": "alfred.onnx",
+    "label": "Alfred",
+    "repo_path": "en/alfred/alfred.onnx"
+  },
+  {
+    "id": "alice",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/Alice/Alice.onnx",
+    "filename": "alice.onnx",
+    "label": "Alice",
+    "repo_path": "en/Alice/Alice.onnx"
+  },
+  {
+    "id": "andromeda",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/andromeda/andromeda.onnx",
+    "filename": "andromeda.onnx",
+    "label": "Andromeda",
+    "repo_path": "en/andromeda/andromeda.onnx"
+  },
+  {
+    "id": "barclay",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/barclay/Barclay.onnx",
+    "filename": "barclay.onnx",
+    "label": "Barclay",
+    "repo_path": "en/barclay/Barclay.onnx"
+  },
+  {
+    "id": "bartolo",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/bartolo/Bartolo.onnx",
+    "filename": "bartolo.onnx",
+    "label": "Bartolo",
+    "repo_path": "en/bartolo/Bartolo.onnx"
+  },
+  {
+    "id": "choo_choo_homie",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/choo_choo_homie/choo_choo_homie.onnx",
+    "filename": "choo_choo_homie.onnx",
+    "label": "Choo Choo Homie",
+    "repo_path": "en/choo_choo_homie/choo_choo_homie.onnx"
+  },
+  {
+    "id": "computer",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/computer/computer_v2.onnx",
+    "filename": "computer.onnx",
+    "label": "Computer",
+    "repo_path": "en/computer/computer_v2.onnx"
+  },
+  {
+    "id": "computer_v1",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/computer/computer_v1.onnx",
+    "filename": "computer_v1.onnx",
+    "label": "Computer v1",
+    "repo_path": "en/computer/computer_v1.onnx"
+  },
+  {
+    "id": "darth_vader",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/darth_vader/Darth_Vader.onnx",
+    "filename": "darth_vader.onnx",
+    "label": "Darth Vader",
+    "repo_path": "en/darth_vader/Darth_Vader.onnx"
+  },
+  {
+    "id": "do_you_read_me_hal",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/do_you_read_me__hal/do_you_read_me__hal.onnx",
+    "filename": "do_you_read_me_hal.onnx",
+    "label": "Do You Read Me Hal",
+    "repo_path": "en/do_you_read_me__hal/do_you_read_me__hal.onnx"
+  },
+  {
+    "id": "dumbledore",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/Dumbledore/Dumbledore.onnx",
+    "filename": "dumbledore.onnx",
+    "label": "Dumbledore",
+    "repo_path": "en/Dumbledore/Dumbledore.onnx"
+  },
+  {
+    "id": "edna",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/edna/edna.onnx",
+    "filename": "edna.onnx",
+    "label": "Edna",
+    "repo_path": "en/edna/edna.onnx"
+  },
+  {
+    "id": "em_oi",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/em__oi/em__oi.onnx",
+    "filename": "em_oi.onnx",
+    "label": "Em Oi",
+    "repo_path": "en/em__oi/em__oi.onnx"
+  },
+  {
+    "id": "glados",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/glados/glados.onnx",
+    "filename": "glados.onnx",
+    "label": "Glados",
+    "repo_path": "en/glados/glados.onnx"
+  },
+  {
+    "id": "hal",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hal/hal_v2.onnx",
+    "filename": "hal.onnx",
+    "label": "Hal",
+    "repo_path": "en/hal/hal_v2.onnx"
+  },
+  {
+    "id": "hal_v1",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hal/hal_v1.onnx",
+    "filename": "hal_v1.onnx",
+    "label": "Hal v1",
+    "repo_path": "en/hal/hal_v1.onnx"
+  },
+  {
+    "id": "hey_alba",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_alba/hey_alba.onnx",
+    "filename": "hey_alba.onnx",
+    "label": "Hey Alba",
+    "repo_path": "en/hey_alba/hey_alba.onnx"
+  },
+  {
+    "id": "hey_anna",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_anna/hey_anna.onnx",
+    "filename": "hey_anna.onnx",
+    "label": "Hey Anna",
+    "repo_path": "en/hey_anna/hey_anna.onnx"
+  },
+  {
+    "id": "hey_barabas",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_barabas/hey_barabas.onnx",
+    "filename": "hey_barabas.onnx",
+    "label": "Hey Barabas",
+    "repo_path": "en/hey_barabas/hey_barabas.onnx"
+  },
+  {
+    "id": "hey_billy",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_billy/hey_billy.onnx",
+    "filename": "hey_billy.onnx",
+    "label": "Hey Billy",
+    "repo_path": "en/hey_billy/hey_billy.onnx"
+  },
+  {
+    "id": "hey_chatterbox",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_chatterbox/hey_chatterbox.onnx",
+    "filename": "hey_chatterbox.onnx",
+    "label": "Hey Chatterbox",
+    "repo_path": "en/hey_chatterbox/hey_chatterbox.onnx"
+  },
+  {
+    "id": "hey_chewbacca",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_chewbacca/Hey_Chewbacca.onnx",
+    "filename": "hey_chewbacca.onnx",
+    "label": "Hey Chewbacca",
+    "repo_path": "en/hey_chewbacca/Hey_Chewbacca.onnx"
+  },
+  {
+    "id": "hey_cj",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_cj/Hey_CJ.onnx",
+    "filename": "hey_cj.onnx",
+    "label": "Hey Cj",
+    "repo_path": "en/hey_cj/Hey_CJ.onnx"
+  },
+  {
+    "id": "hey_dick_head",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_dick_head/hey_dick_head.onnx",
+    "filename": "hey_dick_head.onnx",
+    "label": "Hey Dick Head",
+    "repo_path": "en/hey_dick_head/hey_dick_head.onnx"
+  },
+  {
+    "id": "hey_esp",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_esp/hey_esp.onnx",
+    "filename": "hey_esp.onnx",
+    "label": "Hey Esp",
+    "repo_path": "en/hey_esp/hey_esp.onnx"
+  },
+  {
+    "id": "hey_frenck",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_frenck/hey_frenck.onnx",
+    "filename": "hey_frenck.onnx",
+    "label": "Hey Frenck",
+    "repo_path": "en/hey_frenck/hey_frenck.onnx"
+  },
+  {
+    "id": "hey_friday",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_friday/hey_Friday!.onnx",
+    "filename": "hey_friday.onnx",
+    "label": "Hey Friday",
+    "repo_path": "en/hey_friday/hey_Friday!.onnx"
+  },
+  {
+    "id": "hey_gerty",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_GERTY/hey_GERTY.onnx",
+    "filename": "hey_gerty.onnx",
+    "label": "Hey GERTY",
+    "repo_path": "en/hey_GERTY/hey_GERTY.onnx"
+  },
+  {
+    "id": "hey_guillermo",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_guillermo/hey_guillermo.onnx",
+    "filename": "hey_guillermo.onnx",
+    "label": "Hey Guillermo",
+    "repo_path": "en/hey_guillermo/hey_guillermo.onnx"
+  },
+  {
+    "id": "hey_hal",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey__hal/hey__hal.onnx",
+    "filename": "hey_hal.onnx",
+    "label": "Hey Hal",
+    "repo_path": "en/hey__hal/hey__hal.onnx"
+  },
+  {
+    "id": "hey_home_free",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_home_free/hey_home_free.onnx",
+    "filename": "hey_home_free.onnx",
+    "label": "Hey Home Free",
+    "repo_path": "en/hey_home_free/hey_home_free.onnx"
+  },
+  {
+    "id": "hey_homer",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_homer/Hey_Homer.onnx",
+    "filename": "hey_homer.onnx",
+    "label": "Hey Homer",
+    "repo_path": "en/hey_homer/Hey_Homer.onnx"
+  },
+  {
+    "id": "hey_honey",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_honey/Hey_Honey.onnx",
+    "filename": "hey_honey.onnx",
+    "label": "Hey Honey",
+    "repo_path": "en/hey_honey/Hey_Honey.onnx"
+  },
+  {
+    "id": "hey_house",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_house/hey_house.onnx",
+    "filename": "hey_house.onnx",
+    "label": "Hey House",
+    "repo_path": "en/hey_house/hey_house.onnx"
+  },
+  {
+    "id": "hey_kitt",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_kitt/hey_kitt.onnx",
+    "filename": "hey_kitt.onnx",
+    "label": "Hey Kitt",
+    "repo_path": "en/hey_kitt/hey_kitt.onnx"
+  },
+  {
+    "id": "hey_konstantin",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_konstantin/hey_konstantin.onnx",
+    "filename": "hey_konstantin.onnx",
+    "label": "Hey Konstantin",
+    "repo_path": "en/hey_konstantin/hey_konstantin.onnx"
+  },
+  {
+    "id": "hey_kreitos",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_kratos/Hey_Kreitos.onnx",
+    "filename": "hey_kreitos.onnx",
+    "label": "Hey Kratos",
+    "repo_path": "en/hey_kratos/Hey_Kreitos.onnx"
+  },
+  {
+    "id": "lara",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/Hey%20Lara/lara.onnx",
+    "filename": "lara.onnx",
+    "label": "Hey Lara",
+    "repo_path": "en/Hey Lara/lara.onnx"
+  },
+  {
+    "id": "hey_lisa",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_lisa/hey_lisa.onnx",
+    "filename": "hey_lisa.onnx",
+    "label": "Hey Lisa",
+    "repo_path": "en/hey_lisa/hey_lisa.onnx"
+  },
+  {
+    "id": "hey_luna",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/Hey%20Luna/hey_luna.onnx",
+    "filename": "hey_luna.onnx",
+    "label": "Hey Luna",
+    "repo_path": "en/Hey Luna/hey_luna.onnx"
+  },
+  {
+    "id": "hey_marvin",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_Marvin/hey_Marvin.onnx",
+    "filename": "hey_marvin.onnx",
+    "label": "Hey Marvin",
+    "repo_path": "en/hey_Marvin/hey_Marvin.onnx"
+  },
+  {
+    "id": "hey_mcqueen",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_mcqueen/Hey_McQueen.onnx",
+    "filename": "hey_mcqueen.onnx",
+    "label": "Hey Mcqueen",
+    "repo_path": "en/hey_mcqueen/Hey_McQueen.onnx"
+  },
+  {
+    "id": "hey_megan",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_megan/hey_megan.onnx",
+    "filename": "hey_megan.onnx",
+    "label": "Hey Megan",
+    "repo_path": "en/hey_megan/hey_megan.onnx"
+  },
+  {
+    "id": "hey_miriel",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_miriel/hey_miriel.onnx",
+    "filename": "hey_miriel.onnx",
+    "label": "Hey Miriel",
+    "repo_path": "en/hey_miriel/hey_miriel.onnx"
+  },
+  {
+    "id": "hey_nabu",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_nabu/hey_nabu_v2.onnx",
+    "filename": "hey_nabu.onnx",
+    "label": "Hey Nabu",
+    "repo_path": "en/hey_nabu/hey_nabu_v2.onnx"
+  },
+  {
+    "id": "hey_nabu_v1",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_nabu/hey_nabu_v1.onnx",
+    "filename": "hey_nabu_v1.onnx",
+    "label": "Hey Nabu v1",
+    "repo_path": "en/hey_nabu/hey_nabu_v1.onnx"
+  },
+  {
+    "id": "hey_ozzy",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_ozzy/hey_ozzy.onnx",
+    "filename": "hey_ozzy.onnx",
+    "label": "Hey Ozzy",
+    "repo_path": "en/hey_ozzy/hey_ozzy.onnx"
+  },
+  {
+    "id": "hey_potato",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_potato/hey_potato.onnx",
+    "filename": "hey_potato.onnx",
+    "label": "Hey Potato",
+    "repo_path": "en/hey_potato/hey_potato.onnx"
+  },
+  {
+    "id": "hey_rick",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_rick/hey_rick.onnx",
+    "filename": "hey_rick.onnx",
+    "label": "Hey Rick",
+    "repo_path": "en/hey_rick/hey_rick.onnx"
+  },
+  {
+    "id": "hey_santa",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_santa/hey_santa.onnx",
+    "filename": "hey_santa.onnx",
+    "label": "Hey Santa",
+    "repo_path": "en/hey_santa/hey_santa.onnx"
+  },
+  {
+    "id": "hey_skelly",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_skelly/Hey_Skelly.onnx",
+    "filename": "hey_skelly.onnx",
+    "label": "Hey Skelly",
+    "repo_path": "en/hey_skelly/Hey_Skelly.onnx"
+  },
+  {
+    "id": "hey_snips",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_snips/hey_snips.onnx",
+    "filename": "hey_snips.onnx",
+    "label": "Hey Snips",
+    "repo_path": "en/hey_snips/hey_snips.onnx"
+  },
+  {
+    "id": "hey_spock",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_spock/hey_spock.onnx",
+    "filename": "hey_spock.onnx",
+    "label": "Hey Spock",
+    "repo_path": "en/hey_spock/hey_spock.onnx"
+  },
+  {
+    "id": "hey_wire_tap",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_wire_tap/hey_wire_tap.onnx",
+    "filename": "hey_wire_tap.onnx",
+    "label": "Hey Wire Tap",
+    "repo_path": "en/hey_wire_tap/hey_wire_tap.onnx"
+  },
+  {
+    "id": "hey_zelda",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hey_zelda/hey_zelda.onnx",
+    "filename": "hey_zelda.onnx",
+    "label": "Hey Zelda",
+    "repo_path": "en/hey_zelda/hey_zelda.onnx"
+  },
+  {
+    "id": "hi_xiaowen",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hi_xiaowen/hi_xiaowen_v2.onnx",
+    "filename": "hi_xiaowen.onnx",
+    "label": "Hi Xiaowen",
+    "repo_path": "en/hi_xiaowen/hi_xiaowen_v2.onnx"
+  },
+  {
+    "id": "hi_xiaowen_v1",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hi_xiaowen/hi_xiaowen_v1.onnx",
+    "filename": "hi_xiaowen_v1.onnx",
+    "label": "Hi Xiaowen v1",
+    "repo_path": "en/hi_xiaowen/hi_xiaowen_v1.onnx"
+  },
+  {
+    "id": "hola_casita",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/hola_casita/Hola_casita.onnx",
+    "filename": "hola_casita.onnx",
+    "label": "Hola Casita",
+    "repo_path": "en/hola_casita/Hola_casita.onnx"
+  },
+  {
+    "id": "home_assistant",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/home_assistant/Home_assistant.onnx",
+    "filename": "home_assistant.onnx",
+    "label": "Home Assistant",
+    "repo_path": "en/home_assistant/Home_assistant.onnx"
+  },
+  {
+    "id": "janet",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/janet/Janet.onnx",
+    "filename": "janet.onnx",
+    "label": "Janet",
+    "repo_path": "en/janet/Janet.onnx"
+  },
+  {
+    "id": "djar_vis",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/jarvis/djar_vis.onnx",
+    "filename": "djar_vis.onnx",
+    "label": "Jarvis",
+    "repo_path": "en/jarvis/djar_vis.onnx"
+  },
+  {
+    "id": "jarvis",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/jarvis/jarvis_v2.onnx",
+    "filename": "jarvis.onnx",
+    "label": "Jarvis",
+    "repo_path": "en/jarvis/jarvis_v2.onnx"
+  },
+  {
+    "id": "jarvis_v1",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/jarvis/jarvis_v1.onnx",
+    "filename": "jarvis_v1.onnx",
+    "label": "Jarvis v1",
+    "repo_path": "en/jarvis/jarvis_v1.onnx"
+  },
+  {
+    "id": "johnny_five",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/johnny_five/johnny_five.onnx",
+    "filename": "johnny_five.onnx",
+    "label": "Johnny Five",
+    "repo_path": "en/johnny_five/johnny_five.onnx"
+  },
+  {
+    "id": "jupiter-40-30-1300",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/jupiter/jupiter-40-30-1300.onnx",
+    "filename": "jupiter-40-30-1300.onnx",
+    "label": "Jupiter",
+    "repo_path": "en/jupiter/jupiter-40-30-1300.onnx"
+  },
+  {
+    "id": "jupiter-50-50-700",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/jupiter/jupiter-50-50-700.onnx",
+    "filename": "jupiter-50-50-700.onnx",
+    "label": "Jupiter",
+    "repo_path": "en/jupiter/jupiter-50-50-700.onnx"
+  },
+  {
+    "id": "kelsey",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/kelsey/kelsey.onnx",
+    "filename": "kelsey.onnx",
+    "label": "Kelsey",
+    "repo_path": "en/kelsey/kelsey.onnx"
+  },
+  {
+    "id": "lisa",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/lisa/Lisa.onnx",
+    "filename": "lisa.onnx",
+    "label": "Lisa",
+    "repo_path": "en/lisa/Lisa.onnx"
+  },
+  {
+    "id": "maar_vin",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/marvin/Maar_Vin.onnx",
+    "filename": "maar_vin.onnx",
+    "label": "Marvin",
+    "repo_path": "en/marvin/Maar_Vin.onnx"
+  },
+  {
+    "id": "marvin",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/marvin/marvin_v2.onnx",
+    "filename": "marvin.onnx",
+    "label": "Marvin",
+    "repo_path": "en/marvin/marvin_v2.onnx"
+  },
+  {
+    "id": "marvin_v1",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/marvin/marvin_v1.onnx",
+    "filename": "marvin_v1.onnx",
+    "label": "Marvin v1",
+    "repo_path": "en/marvin/marvin_v1.onnx"
+  },
+  {
+    "id": "mirror_mirror",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/mirror_mirror_on_the_wall/mirror_mirror.onnx",
+    "filename": "mirror_mirror.onnx",
+    "label": "Mirror Mirror on the Wall",
+    "repo_path": "en/mirror_mirror_on_the_wall/mirror_mirror.onnx"
+  },
+  {
+    "id": "mirror_mirror_on_the_wall",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/mirror_mirror_on_the_wall/mirror_mirror_on_the_wall.onnx",
+    "filename": "mirror_mirror_on_the_wall.onnx",
+    "label": "Mirror Mirror on the Wall",
+    "repo_path": "en/mirror_mirror_on_the_wall/mirror_mirror_on_the_wall.onnx"
+  },
+  {
+    "id": "mr._anderson",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/mr_anderson/Mr._Anderson.onnx",
+    "filename": "mr._anderson.onnx",
+    "label": "Mr Anderson",
+    "repo_path": "en/mr_anderson/Mr._Anderson.onnx"
+  },
+  {
+    "id": "mr_smith",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/mr_smith/mr_smith.onnx",
+    "filename": "mr_smith.onnx",
+    "label": "Mr Smith",
+    "repo_path": "en/mr_smith/mr_smith.onnx"
+  },
+  {
+    "id": "mr._wick",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/mr_wick/Mr._Wick.onnx",
+    "filename": "mr._wick.onnx",
+    "label": "Mr Wick",
+    "repo_path": "en/mr_wick/Mr._Wick.onnx"
+  },
+  {
+    "id": "nihao_mia",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/nihao_mia/nihao_mia_v2.onnx",
+    "filename": "nihao_mia.onnx",
+    "label": "Nihao Mia",
+    "repo_path": "en/nihao_mia/nihao_mia_v2.onnx"
+  },
+  {
+    "id": "nihao_mia_v1",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/nihao_mia/nihao_mia_v1.onnx",
+    "filename": "nihao_mia_v1.onnx",
+    "label": "Nihao Mia v1",
+    "repo_path": "en/nihao_mia/nihao_mia_v1.onnx"
+  },
+  {
+    "id": "nihao_wenwen",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/nihao_wenwen/nihao_wenwen.onnx",
+    "filename": "nihao_wenwen.onnx",
+    "label": "Nihao Wenwen",
+    "repo_path": "en/nihao_wenwen/nihao_wenwen.onnx"
+  },
+  {
+    "id": "oi_fuckwhit",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/oi_fuckwhit/oi_fuckwhit_v2.onnx",
+    "filename": "oi_fuckwhit.onnx",
+    "label": "Oi Fuckwhit",
+    "repo_path": "en/oi_fuckwhit/oi_fuckwhit_v2.onnx"
+  },
+  {
+    "id": "oi_fuckwhit_v1",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/oi_fuckwhit/oi_fuckwhit_v1.onnx",
+    "filename": "oi_fuckwhit_v1.onnx",
+    "label": "Oi Fuckwhit v1",
+    "repo_path": "en/oi_fuckwhit/oi_fuckwhit_v1.onnx"
+  },
+  {
+    "id": "ok_bender",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/ok_bender/ok_bender.onnx",
+    "filename": "ok_bender.onnx",
+    "label": "Ok Bender",
+    "repo_path": "en/ok_bender/ok_bender.onnx"
+  },
+  {
+    "id": "ok_boss",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/ok_boss/ok_boss.onnx",
+    "filename": "ok_boss.onnx",
+    "label": "Ok Boss",
+    "repo_path": "en/ok_boss/ok_boss.onnx"
+  },
+  {
+    "id": "ok_casita",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/ok_casita/ok_casita.onnx",
+    "filename": "ok_casita.onnx",
+    "label": "Ok Casita",
+    "repo_path": "en/ok_casita/ok_casita.onnx"
+  },
+  {
+    "id": "ok_computer",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/ok_computer/ok_computer.onnx",
+    "filename": "ok_computer.onnx",
+    "label": "Ok Computer",
+    "repo_path": "en/ok_computer/ok_computer.onnx"
+  },
+  {
+    "id": "ok_home",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/ok_home/ok_home.onnx",
+    "filename": "ok_home.onnx",
+    "label": "Ok Home",
+    "repo_path": "en/ok_home/ok_home.onnx"
+  },
+  {
+    "id": "ok_jarvis",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/ok_jarvis/ok_jarvis.onnx",
+    "filename": "ok_jarvis.onnx",
+    "label": "Ok Jarvis",
+    "repo_path": "en/ok_jarvis/ok_jarvis.onnx"
+  },
+  {
+    "id": "ok_nabu",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/ok_nabu/ok_nabu.onnx",
+    "filename": "ok_nabu.onnx",
+    "label": "Ok Nabu",
+    "repo_path": "en/ok_nabu/ok_nabu.onnx"
+  },
+  {
+    "id": "ok_neo",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/ok_neo/ok_neo.onnx",
+    "filename": "ok_neo.onnx",
+    "label": "Ok Neo",
+    "repo_path": "en/ok_neo/ok_neo.onnx"
+  },
+  {
+    "id": "ok_paulus",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/ok_paulus/ok_paulus.onnx",
+    "filename": "ok_paulus.onnx",
+    "label": "Ok Paulus",
+    "repo_path": "en/ok_paulus/ok_paulus.onnx"
+  },
+  {
+    "id": "ok_tau",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/ok_tau/ok_tau.onnx",
+    "filename": "ok_tau.onnx",
+    "label": "Ok Tau",
+    "repo_path": "en/ok_tau/ok_tau.onnx"
+  },
+  {
+    "id": "ok_trevor",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/ok_trevor/ok_trevor.onnx",
+    "filename": "ok_trevor.onnx",
+    "label": "Ok Trevor",
+    "repo_path": "en/ok_trevor/ok_trevor.onnx"
+  },
+  {
+    "id": "ok_wire_tap",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/ok_wire_tap/ok_wire_tap.onnx",
+    "filename": "ok_wire_tap.onnx",
+    "label": "Ok Wire Tap",
+    "repo_path": "en/ok_wire_tap/ok_wire_tap.onnx"
+  },
+  {
+    "id": "pandora",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/pandora/Pandora.onnx",
+    "filename": "pandora.onnx",
+    "label": "Pandora",
+    "repo_path": "en/pandora/Pandora.onnx"
+  },
+  {
+    "id": "polly",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/polly/polly.onnx",
+    "filename": "polly.onnx",
+    "label": "Polly",
+    "repo_path": "en/polly/polly.onnx"
+  },
+  {
+    "id": "queen_of_lights",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/Queen_of_lights/Queen_of_lights.onnx",
+    "filename": "queen_of_lights.onnx",
+    "label": "Queen of Lights",
+    "repo_path": "en/Queen_of_lights/Queen_of_lights.onnx"
+  },
+  {
+    "id": "queen_of_lights_v0.1",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/Queen_of_lights/Queen_of_lights_v0.1.onnx",
+    "filename": "queen_of_lights_v0.1.onnx",
+    "label": "Queen of Lights",
+    "repo_path": "en/Queen_of_lights/Queen_of_lights_v0.1.onnx"
+  },
+  {
+    "id": "r2d2",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/r2d2/r2d2.onnx",
+    "filename": "r2d2.onnx",
+    "label": "R2d2",
+    "repo_path": "en/r2d2/r2d2.onnx"
+  },
+  {
+    "id": "ronaldo",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/ronaldo/Ronaldo.onnx",
+    "filename": "ronaldo.onnx",
+    "label": "Ronaldo",
+    "repo_path": "en/ronaldo/Ronaldo.onnx"
+  },
+  {
+    "id": "rubber_duck",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/rubber_duck/rubber_duck.onnx",
+    "filename": "rubber_duck.onnx",
+    "label": "Rubber Duck",
+    "repo_path": "en/rubber_duck/rubber_duck.onnx"
+  },
+  {
+    "id": "santana",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/santana/Santana.onnx",
+    "filename": "santana.onnx",
+    "label": "Santana",
+    "repo_path": "en/santana/Santana.onnx"
+  },
+  {
+    "id": "scarlett",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/scarlett/Scarlett.onnx",
+    "filename": "scarlett.onnx",
+    "label": "Scarlett",
+    "repo_path": "en/scarlett/Scarlett.onnx"
+  },
+  {
+    "id": "scooby",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/scooby/Scooby.onnx",
+    "filename": "scooby.onnx",
+    "label": "Scooby",
+    "repo_path": "en/scooby/Scooby.onnx"
+  },
+  {
+    "id": "sheila",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/sheila/sheila_v2.onnx",
+    "filename": "sheila.onnx",
+    "label": "Sheila",
+    "repo_path": "en/sheila/sheila_v2.onnx"
+  },
+  {
+    "id": "sheila_v1",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/sheila/sheila_v1.onnx",
+    "filename": "sheila_v1.onnx",
+    "label": "Sheila v1",
+    "repo_path": "en/sheila/sheila_v1.onnx"
+  },
+  {
+    "id": "skynet",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/skynet/Skynet.onnx",
+    "filename": "skynet.onnx",
+    "label": "Skynet",
+    "repo_path": "en/skynet/Skynet.onnx"
+  },
+  {
+    "id": "tars",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/TARS/TARS.onnx",
+    "filename": "tars.onnx",
+    "label": "TARS",
+    "repo_path": "en/TARS/TARS.onnx"
+  },
+  {
+    "id": "terminator",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/terminator/Terminator.onnx",
+    "filename": "terminator.onnx",
+    "label": "Terminator",
+    "repo_path": "en/terminator/Terminator.onnx"
+  },
+  {
+    "id": "ultra_house",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/ultra_house/ultra_house.onnx",
+    "filename": "ultra_house.onnx",
+    "label": "Ultra House",
+    "repo_path": "en/ultra_house/ultra_house.onnx"
+  },
+  {
+    "id": "veronica",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/veronica/veronica.onnx",
+    "filename": "veronica.onnx",
+    "label": "Veronica",
+    "repo_path": "en/veronica/veronica.onnx"
+  },
+  {
+    "id": "wall-e",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/wall-e/wall-e.onnx",
+    "filename": "wall-e.onnx",
+    "label": "Wall-e",
+    "repo_path": "en/wall-e/wall-e.onnx"
+  },
+  {
+    "id": "wheatley",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/wheatley/wheatley.onnx",
+    "filename": "wheatley.onnx",
+    "label": "Wheatley",
+    "repo_path": "en/wheatley/wheatley.onnx"
+  },
+  {
+    "id": "winston",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/winston/Winston.onnx",
+    "filename": "winston.onnx",
+    "label": "Winston",
+    "repo_path": "en/winston/Winston.onnx"
+  },
+  {
+    "id": "yo_bitch",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/yo_bitch/yo_bitch.onnx",
+    "filename": "yo_bitch.onnx",
+    "label": "Yo Bitch",
+    "repo_path": "en/yo_bitch/yo_bitch.onnx"
+  },
+  {
+    "id": "yo_homie",
+    "lang": "en",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/en/yo_homie/yo_homie.onnx",
+    "filename": "yo_homie.onnx",
+    "label": "Yo Homie",
+    "repo_path": "en/yo_homie/yo_homie.onnx"
+  },
+  {
+    "id": "dk_hey_leo",
+    "lang": "dk",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/dk/hey_leo/hey_leo.onnx",
+    "filename": "dk_hey_leo.onnx",
+    "label": "Hey Leo",
+    "repo_path": "dk/hey_leo/hey_leo.onnx"
+  },
+  {
+    "id": "fi_kai_sa",
+    "lang": "fi",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/fi/kaisa/kai_sa.onnx",
+    "filename": "fi_kai_sa.onnx",
+    "label": "Kaisa",
+    "repo_path": "fi/kaisa/kai_sa.onnx"
+  },
+  {
+    "id": "ru_nafanya",
+    "lang": "ru",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/ru/nafanya/nafanya.onnx",
+    "filename": "ru_nafanya.onnx",
+    "label": "Nafanya",
+    "repo_path": "ru/nafanya/nafanya.onnx"
+  },
+  {
+    "id": "zh_xiao_ai",
+    "lang": "zh",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/zh/xiao_ai.onnx",
+    "filename": "zh_xiao_ai.onnx",
+    "label": "Xiao Ai",
+    "repo_path": "zh/xiao_ai.onnx"
+  },
+  {
+    "id": "zh_xiao_bu",
+    "lang": "zh",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/zh/xiao_bu.onnx",
+    "filename": "zh_xiao_bu.onnx",
+    "label": "Xiao Bu",
+    "repo_path": "zh/xiao_bu.onnx"
+  },
+  {
+    "id": "zh_xiao_zhi",
+    "lang": "zh",
+    "url": "https://raw.githubusercontent.com/fwartner/home-assistant-wakewords-collection/main/zh/xiao_zhi.onnx",
+    "filename": "zh_xiao_zhi.onnx",
+    "label": "Xiao Zhi",
+    "repo_path": "zh/xiao_zhi.onnx"
+  }
+]

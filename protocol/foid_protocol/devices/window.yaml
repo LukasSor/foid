@@ -1,0 +1,34 @@
+id: window
+name: window
+ui: window
+aliases:
+  - fenster
+  - fensta
+  - window
+  - okno
+defaults:
+  open: false
+actions:
+  - id: open
+    aliases:
+      - auf
+      - öffnen
+      - oeffnen
+      - aufmachen
+      - aufmachen bitte
+      - open
+      - otevři
+      - otevrit
+    set:
+      open: true
+  - id: close
+    aliases:
+      - zu
+      - schließen
+      - schliessen
+      - zumachen
+      - close
+      - zavři
+      - zavrit
+    set:
+      open: false

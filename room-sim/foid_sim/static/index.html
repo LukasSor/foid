@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Foid — Room</title>
+    <link rel="stylesheet" href="/static/room.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="brand">
+          <p>Foid</p>
+          <h1 data-i18n="room.heading">Room</h1>
+        </div>
+        <div class="topbar-end">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-locale="en">EN</button>
+            <button type="button" data-locale="de">DE</button>
+          </div>
+          <span class="live-badge" id="live-badge" data-i18n="room.live">live</span>
+        </div>
+      </header>
+
+      <div class="stage-wrap">
+        <div class="stage" id="stage">
+          <svg viewBox="0 0 1100 700" role="img" aria-label="Care room">
+            <defs>
+              <linearGradient id="duskSky" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="#1b2e55" />
+                <stop offset="55%" stop-color="#c96b58" />
+                <stop offset="100%" stop-color="#f7e4c4" />
+              </linearGradient>
+              <linearGradient id="wall" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="#f3e6d2" />
+                <stop offset="100%" stop-color="#e2d0b4" />
+              </linearGradient>
+              <linearGradient id="floor" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="#b0895b" />
+                <stop offset="100%" stop-color="#7a5633" />
+              </linearGradient>
+              <linearGradient id="tvOn" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stop-color="#9ad7ff" />
+                <stop offset="100%" stop-color="#16324d" />
+              </linearGradient>
+              <linearGradient id="glassTint" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stop-color="#d7ecff" stop-opacity="0.38" />
+                <stop offset="100%" stop-color="#3a5a78" stop-opacity="0.16" />
+              </linearGradient>
+              <linearGradient id="mattress" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="#f6ead6" />
+                <stop offset="100%" stop-color="#e2cda8" />
+              </linearGradient>
+              <clipPath id="windowOpening">
+                <rect x="240" y="96" width="236" height="176" rx="2" />
+              </clipPath>
+            </defs>
+
+            <rect width="1100" height="700" fill="#d8c3a5" />
+
+            <polygon points="0,90 170,40 930,40 1100,90 1100,700 0,700" fill="url(#wall)" />
+            <polygon points="0,470 170,420 930,420 1100,470 1100,700 0,700" fill="url(#floor)" />
+            <g stroke="#6a4a2b" stroke-width="3" opacity="0.28">
+              <line x1="40" y1="490" x2="160" y2="700" />
+              <line x1="180" y1="478" x2="340" y2="700" />
+              <line x1="340" y1="460" x2="530" y2="700" />
+              <line x1="520" y1="448" x2="730" y2="700" />
+              <line x1="720" y1="448" x2="930" y2="700" />
+              <line x1="900" y1="460" x2="1080" y2="700" />
+            </g>
+            <g id="window" class="hotspot">
+              <rect x="220" y="76" width="276" height="216" rx="8" fill="#efe6d6" stroke="#cbb8a0" stroke-width="3" />
+              <rect x="236" y="92" width="244" height="184" rx="3" fill="#2a3338" />
+              <g id="outside" clip-path="url(#windowOpening)">
+                <rect x="236" y="92" width="248" height="188" fill="url(#duskSky)" />
+                <circle cx="440" cy="128" r="16" fill="#ffe9c2" />
+                <circle cx="440" cy="128" r="28" fill="#ffd7a0" opacity="0.22" />
+                <path d="M240 236 L278 173 L315 213 L355 140 L405 203 L445 163 L476 188 L476 272 L240 272 Z" fill="#5d6f8a" />
+                <path d="M240 226 L295 163 L328 198 L372 110 L420 193 L458 153 L476 173 L476 272 L240 272 Z" fill="#3f5368" />
+                <path d="M295 163 L282 178 L303 171 Z" fill="#ffffff" />
+                <path d="M372 110 L361 133 L384 132 Z" fill="#ffffff" />
+                <path d="M458 153 L447 164 L463 159 Z" fill="#f7fbff" />
+                <path d="M240 238 C290 226 330 250 380 236 C425 224 455 240 476 232 L476 272 L240 272 Z" fill="#2f4638" />
+                <path d="M240 253 C295 244 340 262 395 250 C430 242 458 254 476 248 L476 272 L240 272 Z" fill="#24382c" />
+                <circle cx="280" cy="256" r="1.6" fill="#ffd27a" />
+                <circle cx="325" cy="260" r="1.4" fill="#ffe7a8" />
+                <circle cx="370" cy="248" r="1.6" fill="#ffd27a" />
+                <circle cx="418" cy="258" r="1.3" fill="#fff1c8" />
+              </g>
+              <g clip-path="url(#windowOpening)">
+                <g class="sash">
+                  <rect class="pane" x="240" y="96" width="236" height="176" fill="url(#glassTint)" />
+                  <polygon class="shine" points="240,96 325,96 240,173" fill="#ffffff" opacity="0.28" />
+                  <rect x="240" y="96" width="236" height="176" fill="none" stroke="#f4eee4" stroke-width="8" />
+                </g>
+              </g>
+              <rect x="212" y="290" width="292" height="14" rx="2" fill="#f3eadb" />
+              <rect x="204" y="302" width="308" height="11" rx="2" fill="#d4c4a8" />
+            </g>
+
+            <g id="picture">
+              <rect x="540" y="118" width="110" height="80" rx="4" fill="#6b4a2e" />
+              <rect x="550" y="128" width="90" height="60" fill="#8ea07a" />
+              <path d="M550 176 L578 156 L602 170 L640 144 L640 188 L550 188 Z" fill="#6d7f6a" />
+            </g>
+
+            <g id="tv" class="hotspot">
+              <rect x="665" y="128" width="250" height="168" rx="10" fill="#2a2420" />
+              <rect class="screen" x="677" y="140" width="226" height="132" rx="4" fill="#161310" />
+            </g>
+
+            <g id="bed" class="hotspot">
+              <ellipse cx="760" cy="628" rx="230" ry="12" fill="#5c3d27" opacity="0.22" />
+              <rect x="528" y="568" width="16" height="56" rx="2" fill="#6b5340" />
+              <rect x="968" y="568" width="16" height="56" rx="2" fill="#6b5340" />
+              <rect x="522" y="618" width="30" height="8" rx="2" fill="#5c4636" />
+              <rect x="960" y="618" width="30" height="8" rx="2" fill="#5c4636" />
+              <rect x="520" y="556" width="472" height="18" rx="3" fill="#8b5e34" />
+              <rect x="520" y="548" width="472" height="10" fill="#a06c3c" />
+              <rect x="516" y="448" width="18" height="120" rx="3" fill="#7a5230" />
+              <rect x="508" y="440" width="34" height="14" rx="2" fill="#8b5e34" />
+              <rect x="974" y="500" width="18" height="68" rx="3" fill="#7a5230" />
+              <rect x="966" y="492" width="34" height="14" rx="2" fill="#8b5e34" />
+              <rect class="mattress-seat" x="668" y="504" width="310" height="52" rx="6" fill="url(#mattress)" />
+              <rect x="676" y="512" width="294" height="16" rx="4" fill="#ead7b8" />
+              <rect x="668" y="548" width="310" height="8" fill="#c4a882" />
+              <g class="headrest">
+                <rect x="518" y="500" width="154" height="56" rx="7" fill="#7a5230" />
+                <rect class="back-mattress" x="524" y="504" width="144" height="48" rx="6" fill="url(#mattress)" />
+                <rect x="532" y="512" width="128" height="16" rx="4" fill="#f4e6d0" />
+                <ellipse cx="582" cy="522" rx="40" ry="15" fill="#fbf6ee" />
+                <ellipse cx="582" cy="518" rx="30" ry="10" fill="#fffdf8" />
+              </g>
+              <circle cx="668" cy="548" r="7" fill="#8a7358" />
+              <circle cx="668" cy="548" r="3.5" fill="#c4a882" />
+              <rect x="720" y="488" width="8" height="68" rx="2" fill="#a08a70" opacity="0.65" />
+              <rect x="880" y="488" width="8" height="68" rx="2" fill="#a08a70" opacity="0.65" />
+              <rect x="720" y="484" width="168" height="8" rx="2" fill="#a08a70" opacity="0.65" />
+            </g>
+
+            <g id="lamp" class="hotspot">
+              <ellipse class="glow" cx="470" cy="430" rx="120" ry="90" fill="#ffe7a8" />
+              <rect x="464" y="430" width="12" height="150" fill="#c4a574" />
+              <ellipse cx="470" cy="582" rx="36" ry="8" fill="#8b5e34" />
+              <polygon class="shade" points="430,430 510,430 492,360 448,360" fill="#d98a4a" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <script src="/i18n.js"></script>
+    <script src="/static/room.js"></script>
+  </body>
+</html>
